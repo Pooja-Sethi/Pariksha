@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".FullImageActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_photo"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/profile_text"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:id="@+id/back_arrow"
+        android:src="@drawable/back_arrow1"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/share_icon"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/share_icon"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:id="@+id/edit_icon"
+        android:src="@drawable/edit_icon"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="270dp"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/full_image"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/edit_icon"
+        android:src="@drawable/profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+  <!--  <ImageView
+        android:id="@+id/full_image"
+        android:src="@drawable/profile"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"/> -->
+
+</RelativeLayout>

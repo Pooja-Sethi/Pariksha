@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Pariksha</string>
+    <string name="pariksha_image">pariksha image</string>
+    <string name="pariksha">PARIKSHA</string>
+    <string name="username">Username</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">or</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="user_name">Username</string>
+    <string name="emailAdd">Email Address</string>
+    <string name="sign_in">Sign In</string>
+    <string name="already_registered_signin_here">Already Registered? Signin Here</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="teacher_view">Teacher</string>
+    <string name="student_view">Student_view</string>
+    <string name="login_teacher">Teacher</string>
+    <string name="login_student">Student</string>
+    <string name="profile">PROFILE</string>
+    <string name="notice">NOTICE</string>
+    <string name="exam">Exam</string>
+    <string name="teacherprofile">teacherProfile</string>
+    <string name="preparetest">PrepareTest</string>
+    <string name="sendnotice">sendNotice</string>
+    <string name="chooseClass">Choose Class</string>
+    <string name="choose_class">Choose Class</string>
+    <string name="enter_topic">Enter Topic</string>
+    <string name="prepare_test">PREPARE TEST</string>
+    <string name="topic_wise_test">Topic-wise test</string>
+    <string name="q_what_is_noun">Q:- What is noun?</string>
+    <string name="a_person">a) Person</string>
+    <string name="b_place">b) Place</string>
+    <string name="c_thing">c) Thing</string>
+    <string name="d_all_of_these">d) All of these</string>
+    <string name="enter_question">Enter Question</string>
+    <string name="submit_question">Submit Question</string>
+    <string name="ques_add">Questions added</string>
+    <string name="enter_correct_option">Enter correct Option</string>
+    <string name="_0">0</string>
+    <string name="view_questions">View Questions</string>
+    <string name="logout">Logout</string>
+    <string name="log_off">Log off</string>
+    <string name="key">Key</string>
+    <string name="enter_key">Enter key</string>
+    <string name="b">b</string>
+    <string name="a">a</string>
+    <string name="c">c</string>
+    <string name="d">d</string>
+    <string name="question">Question</string>
+    <string name="option2">Option2</string>
+    <string name="option3">Option3</string>
+    <string name="option4">Option4</string>
+    <string name="correct_answer">Correct_answer</string>
+    <string name="option1">Option1</string>
+    <string name="display_name">Display Name</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="qnum">Qnum</string>
+    <string name="ques">Ques:-</string>
+    <string name="remove">Remove</string>
+    <string name="insert">Insert</string>
+    <string name="add_question">Add Question</string>
+
+    <string name="profile_pic">Profile_pic</string>
+    <string name="student_profile">Student Profile</string>
+    <string name="give_text">Give Text</string>
+    <string name="give_test">GIVE TEST</string>
+    <string name="result">RESULT</string>
+    <string name="disscussion">DISSCUSSION</string>
+    <string name="start_test">START TEST</string>
+    <string name="start_test_student">Start Test</string>
+    <string name="ques_no">Ques:-</string>
+    <string name="option_1">Option1</string>
+    <string name="option_2">Option2</string>
+    <string name="option_3">Option3</string>
+    <string name="option_4">Option4</string>
+    <string name="_00_00">00:00</string>
+    <string name="total_questions">Total Questions</string>
+    <string-array name="classes">
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+    </string-array>
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "162225226567",
+    "firebase_url": "https://pariksha-bdd26.firebaseio.com",
+    "project_id": "pariksha-bdd26",
+    "storage_bucket": "pariksha-bdd26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162225226567:android:8404df280c521d4c",
+        "android_client_info": {
+          "package_name": "com.minorproject.pariksha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162225226567-dkvthle2jvhquh1a1eulq5eet5vnbjd3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minorproject.pariksha",
+            "certificate_hash": "546907f3c01a8060fee918922de1c21d3c579dd3"
+          }
+        },
+        {
+          "client_id": "162225226567-s6dlcp0k72bo148rec2r3fd9vjan1hp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBso0sLq3CpCtfFOf9AsvyYkReTLq4pJ50"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162225226567-s6dlcp0k72bo148rec2r3fd9vjan1hp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

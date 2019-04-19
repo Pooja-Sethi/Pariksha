@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartTestActivity">
+
+    <include
+        android:id="@+id/start_test_toolbar"
+        layout="@layout/app_bar_layout"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/start_test_toolbar">
+
+        <TextView
+            android:id="@+id/q_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:text="@string/ques_no"/>
+
+        <TextView
+            android:id="@+id/ques_text_stu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/question"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_below="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="@string/option_1"
+            android:background="#03A9F4"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:background="#03A9F4"
+            android:textColor="@color/white"
+            android:text="@string/option_2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_below="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="@string/option_3"
+            android:background="#03A9F4"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:background="#03A9F4"
+            android:textColor="@color/white"
+            android:text="@string/option_4" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_text"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="@string/_00_00"
+        android:layout_marginStart="170dp"
+        android:layout_below="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
