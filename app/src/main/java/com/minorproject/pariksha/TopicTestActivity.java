@@ -44,7 +44,7 @@ public class TopicTestActivity extends AppCompatActivity {
 
    EditText questionText, option1, option2, option3, option4,answer;
    //public static  TextView count;
-   TextView qnum;//how many questions currently added by the teacher
+   public static TextView qnum;//how many questions currently added by the teacher
    public static int num;//to count number of questions so that it does not exceed 5
    Button Submitbtn;
    //String num1;

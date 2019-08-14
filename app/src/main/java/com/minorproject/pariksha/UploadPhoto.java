@@ -7,12 +7,16 @@ public class UploadPhoto {
     private String name;
     private Uri mImageUri;
 
-    public UploadPhoto() {
+    public UploadPhoto(String name, double v) {
     }
 
     public UploadPhoto(String name, Uri mImageUri) {
         this.name = name;
         this.mImageUri = mImageUri;
+    }
+
+    public UploadPhoto() {
+
     }
 
     public String getName() {

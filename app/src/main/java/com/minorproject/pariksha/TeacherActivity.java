@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class TeacherActivity extends AppCompatActivity {
 
-    private ImageView examImage;
+    private ImageView examImage, discussionImage;
     private ImageView profileImage;
 
     @Override
@@ -19,6 +19,17 @@ public class TeacherActivity extends AppCompatActivity {
 
         examImage = (ImageView) findViewById(R.id.exam);
         profileImage = (ImageView) findViewById(R.id.teacher_profile);
+        discussionImage = (ImageView) findViewById(R.id.discussion_teacher);
+
+        discussionImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(TeacherActivity.this, DiscussionActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         examImage.setOnClickListener(new View.OnClickListener() {
             @Override

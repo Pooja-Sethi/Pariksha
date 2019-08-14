@@ -10,22 +10,54 @@
         layout="@layout/app_bar_layout"/>
 
     <TextView
-        android:id="@+id/total_ques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_name"
         android:layout_below="@+id/result_toolbar"
+        android:layout_marginStart="50dp"
+        android:text="@string/display_name"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"/>
+
+
+    <TextView
+        android:id="@+id/result_class_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_class"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_below="@+id/result_toolbar"
+        android:layout_toRightOf="@+id/result_name"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/total_ques"
+        android:layout_below="@+id/result_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:textStyle="bold"
         android:text="@string/total_questions" />
 
     <TextView
         android:id="@+id/textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_below="@+id/result_class_text"
+        android:layout_marginTop="70dp"
         android:layout_toRightOf="@+id/total_ques"
+        android:textSize="16sp"
+        android:textColor="#0009ff"
+        android:textStyle="bold"
         android:layout_marginStart="100dp"
         android:text="TextView" />
 
@@ -33,9 +65,12 @@
         android:id="@+id/correct_text"
         android:layout_below="@+id/total_ques"
         android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="Correct answers" />
 
     <TextView
@@ -43,7 +78,10 @@
         android:layout_below="@+id/correct_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:textStyle="bold"
         android:layout_marginStart="50dp"
         android:text="Wrong answers" />
 
@@ -53,8 +91,11 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/correct_text"
         android:layout_marginStart="100dp"
+        android:textSize="16sp"
+        android:textColor="#0009ff"
+        android:textStyle="bold"
         android:layout_below="@+id/textview1"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="TextView" />
 
     <TextView
@@ -63,8 +104,19 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/incorrect_text"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:layout_marginStart="100dp"
+        android:textColor="#0009ff"
+        android:textStyle="bold"
+        android:textSize="16sp"
         android:text="TextView" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/incorrect_text"
+        android:layout_margin="20dp"
+        android:text="@string/done"
+        android:id="@+id/result_btn"/>
 
 </RelativeLayout>

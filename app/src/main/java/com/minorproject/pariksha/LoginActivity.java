@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     private Toolbar mToolbar;
-    private EditText mkey;
+    public static EditText mkey;
 
     private ProgressDialog mloginProgress;
 

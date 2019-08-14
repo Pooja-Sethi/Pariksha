@@ -8,7 +8,7 @@ public class addInformation {
     String email;
     String password;
     String id;
-   String radiobtn;
+    String radiobtn;
 
     public addInformation(){
 
@@ -19,6 +19,26 @@ public class addInformation {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.radiobtn = radiobtn;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setRadiobtn(String radiobtn) {
         this.radiobtn = radiobtn;
     }
 
@@ -37,7 +57,7 @@ public class addInformation {
         return password;
     }
 
-public String getRadiobtn(){
+     public String getRadiobtn(){
         return radiobtn;
 }
 }

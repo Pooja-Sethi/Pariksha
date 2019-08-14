@@ -70,9 +70,7 @@ public class Question {
         this.option4 = option4;
     }
 
-    public String getCorrect_answer() {
-        return correct_answer;
-    }
+    public String getCorrect_answer() { return correct_answer; }
 
     public void setCorrect_answer(String answer) {
         this.correct_answer =correct_answer;

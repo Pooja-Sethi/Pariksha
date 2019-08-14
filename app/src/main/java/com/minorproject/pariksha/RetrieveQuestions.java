@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,6 +49,7 @@ public class RetrieveQuestions extends AppCompatActivity {
     private ImageView back_arrow;
     FirebaseRecyclerAdapter<questions, questionsViewHolder>firebaseRecyclerAdapter;
     private Object questions;
+    int quesNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,7 @@ public class RetrieveQuestions extends AppCompatActivity {
         myRef = FirebaseDatabase.getInstance().getReference().child(PrepareTest.text).child(PrepareTest.str);
         myRef.keepSynced(true);
 
+        quesNo = Integer.parseInt(TopicTestActivity.qnum.getText().toString());
         //firebaseRecyclerAdapter
         FirebaseRecyclerAdapter<questions, questionsViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<questions, questionsViewHolder>(
                 questions.class,
@@ -110,13 +114,12 @@ public class RetrieveQuestions extends AppCompatActivity {
                 alert();
             }
         });
-
         insertbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-               // insert_prompt();
-               updateData(mquestions);
+               //insert_prompt();
+               //updateData(mquestions);
             }
         });
 
@@ -133,13 +136,33 @@ public class RetrieveQuestions extends AppCompatActivity {
         //this.firebaseRecyclerAdapter.startListening();
     }
 
-    private void updateData(List<com.minorproject.pariksha.questions> mquestions) {
+   /* private void insert_prompt() {
+
+        final EditText editText = new EditText(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Add a Question");
+        builder.setMessage("Enter the position where you want to add new Question");
+        builder.setCancelable(false);
+        builder.setView(editText);
+        builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                int position = Integer.parseInt(editText.getText().toString());
+
+                updateData(position, mquestions);
+            }
+        });
+        builder.show();
+    }*/
+   /* private void updateData(List<com.minorproject.pariksha.questions> mquestions) {
 
 
         this.mquestions.clear();
         this.mquestions.addAll(mquestions);
         //firebaseRecyclerAdapter.notifyDataSetChanged();
-    }
+    }*/
+
 
     private void loadRecyclerViewData() {
 
@@ -230,7 +253,7 @@ public class RetrieveQuestions extends AppCompatActivity {
         }
     }
 
-    /*public void updateData(List<questions> nquestions){
+   /* public void updateData(List<questions> nquestions){
         mquestions.clear();
         mquestions.addAll(nquestions);
         firebaseRecyclerAdapter.notifyDataSetChanged();

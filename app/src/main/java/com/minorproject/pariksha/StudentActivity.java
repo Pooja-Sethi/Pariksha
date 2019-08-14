@@ -27,13 +27,27 @@ public class StudentActivity extends AppCompatActivity {
 
     DatabaseReference dref;*/
 
-   ImageView giveTest;
+   ImageView giveTest, discussionImg, profileStudent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
 
         giveTest = (ImageView) findViewById(R.id.give_exam_img);
+
+        profileStudent = (ImageView) findViewById(R.id.student_profile);
+
+        profileStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(StudentActivity.this, ProfileActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        discussionImg =(ImageView) findViewById(R.id.discussion_icon);
 
         giveTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +58,15 @@ public class StudentActivity extends AppCompatActivity {
             }
         });
 
+        discussionImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(StudentActivity.this, DiscussionActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
         /*t1_question = (TextView) findViewById(R.id.question);
         b1 = (Button) findViewById(R.id.button1);
         b2 = (Button) findViewById(R.id.button2);

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiscussionActivity">
+
+
+
+    <!-- <include
+        android:id="@+id/discussion_toolbar"
+        layout="@layout/app_bar_layout"/> -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#fdf5e6"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Message"
+                android:textColor="#c90dbc"
+                android:layout_weight="1"
+                android:hint="@string/enter_message"/>
+
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:background="#fdf5e6"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/btnsend"
+                android:src="@drawable/send"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

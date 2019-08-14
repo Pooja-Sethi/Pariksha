@@ -36,6 +36,7 @@ public class StartTestActivity extends AppCompatActivity {
 
     TextView timeText;
     private  String mtopic;
+
      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,10 +70,15 @@ public class StartTestActivity extends AppCompatActivity {
              //open result activity
 
              Intent i =new Intent(StartTestActivity.this, ResultActivity.class);
-             i.putExtra("total", String.valueOf(total));
+             if(total>5){
+                 i.putExtra("total", String.valueOf(5));
+             }else {
+                 i.putExtra("total", String.valueOf(total));
+             }
              i.putExtra("correct", String.valueOf(correct));
              i.putExtra("incorrect", String.valueOf(wrong));
              startActivity(i);
+             finish();
 
          }else {
 
@@ -82,23 +88,25 @@ public class StartTestActivity extends AppCompatActivity {
                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                      //ques is accessed from inner class therefore declare final
-                     final Question ques = dataSnapshot.getValue(Question.class);
-                     qnum.setText(ques.getQnum());
+                     final questions ques = dataSnapshot.getValue(questions.class);
+                    // qnum.setText(ques.getQnum());
+                     qnum.setText(String.valueOf(total));
                      quesText.setText(ques.getQuestion());
                      b1.setText(ques.getOption1());
                      b2.setText(ques.getOption2());
                      b3.setText(ques.getOption3());
                      b4.setText(ques.getOption4());
+                     final String ans = ques.getCorrect_answer();
 
-                     Toast.makeText(StartTestActivity.this, "value: "+dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
+                     //Toast.makeText(StartTestActivity.this, "value: "+dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
                      //button 1 clicked
                      b1.setOnClickListener(new View.OnClickListener() {
                          @Override
                          public void onClick(View v) {
 
-                             if (b1.getText().toString().equals(reference.child("correct_answer"))){
+                             if (b1.getText().toString().equals(ans)){
 
-                                 b1.setBackgroundColor(Color.parseColor("#008000"));
+                                 b1.setBackgroundColor(Color.GREEN);
                                  Toast.makeText(StartTestActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
                                  Handler handler = new Handler();
                                  handler.postDelayed(new Runnable() {
@@ -116,13 +124,13 @@ public class StartTestActivity extends AppCompatActivity {
                                  b1.setBackgroundColor(Color.RED);
                                  Toast.makeText(StartTestActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
 
-                                 if(b2.getText().toString().equals(ques.getCorrect_answer())){
+                                 if(b2.getText().toString().equals(ans)){
                                      b2.setBackgroundColor(Color.GREEN);
 
-                                 }else if (b3.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b3.getText().toString().equals(ans)){
                                      b3.setBackgroundColor(Color.GREEN);
 
-                                 }else if (b4.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b4.getText().toString().equals(ans)){
                                      b4.setBackgroundColor(Color.GREEN);
 
                                  }
@@ -146,9 +154,9 @@ public class StartTestActivity extends AppCompatActivity {
                      b2.setOnClickListener(new View.OnClickListener() {
                          @Override
                          public void onClick(View v) {
-                             if (b2.getText().toString().equals(ques.getCorrect_answer())){
+                             if (b2.getText().toString().equals(ans)){
 
-                                 b2.setBackgroundColor(Color.parseColor("#008000"));
+                                 b2.setBackgroundColor(Color.GREEN);
 
                                  Toast.makeText(StartTestActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
                                  Handler handler = new Handler();
@@ -165,12 +173,12 @@ public class StartTestActivity extends AppCompatActivity {
 
                                  wrong++;
                                  b2.setBackgroundColor(Color.RED);
-                                 Toast.makeText(StartTestActivity.this, "Inorrect!", Toast.LENGTH_SHORT).show();
-                                 if(b1.getText().toString().equals(ques.getCorrect_answer())){
+                                 Toast.makeText(StartTestActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
+                                 if(b1.getText().toString().equals(ans)){
                                      b1.setBackgroundColor(Color.GREEN);
-                                 }else if (b3.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b3.getText().toString().equals(ans)){
                                      b3.setBackgroundColor(Color.GREEN);
-                                 }else if (b4.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b4.getText().toString().equals(ans)){
                                      b4.setBackgroundColor(Color.GREEN);
                                  }
 
@@ -193,9 +201,9 @@ public class StartTestActivity extends AppCompatActivity {
                      b3.setOnClickListener(new View.OnClickListener() {
                          @Override
                          public void onClick(View v) {
-                             if (b3.getText().toString().equals(ques.getCorrect_answer())){
+                             if (b3.getText().toString().equals(ans)){
 
-                                 b3.setBackgroundColor(Color.parseColor("#008000"));
+                                 b3.setBackgroundColor(Color.GREEN);
                                  Toast.makeText(StartTestActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
                                  Handler handler = new Handler();
                                  handler.postDelayed(new Runnable() {
@@ -212,11 +220,11 @@ public class StartTestActivity extends AppCompatActivity {
                                  wrong++;
                                  b3.setBackgroundColor(Color.RED);
                                  Toast.makeText(StartTestActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
-                                 if(b1.getText().toString().equals(ques.getCorrect_answer())){
+                                 if(b1.getText().toString().equals(ans)){
                                      b1.setBackgroundColor(Color.GREEN);
-                                 }else if (b2.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b2.getText().toString().equals(ans)){
                                      b2.setBackgroundColor(Color.GREEN);
-                                 }else if (b4.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b4.getText().toString().equals(ans)){
                                      b4.setBackgroundColor(Color.GREEN);
                                  }
 
@@ -240,9 +248,9 @@ public class StartTestActivity extends AppCompatActivity {
                          @Override
                          public void onClick(View v) {
 
-                             if (b4.getText().toString().equals(ques.getCorrect_answer())){
+                             if (b4.getText().toString().equals(ans)){
 
-                                 b4.setBackgroundColor(Color.parseColor("#008000"));
+                                 b4.setBackgroundColor(Color.GREEN);
                                  correct++;
                                  Toast.makeText(StartTestActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
                                  Handler handler = new Handler();
@@ -259,11 +267,11 @@ public class StartTestActivity extends AppCompatActivity {
                                  wrong++;
                                  b4.setBackgroundColor(Color.RED);
                                  Toast.makeText(StartTestActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
-                                 if(b1.getText().toString().equals(ques.getCorrect_answer())){
+                                 if(b1.getText().toString().equals(ans)){
                                      b1.setBackgroundColor(Color.GREEN);
-                                 }else if (b2.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b2.getText().toString().equals(ans)){
                                      b2.setBackgroundColor(Color.GREEN);
-                                 }else if (b3.getText().toString().equals(ques.getCorrect_answer())){
+                                 }else if (b3.getText().toString().equals(ans)){
                                      b3.setBackgroundColor(Color.GREEN);
                                  }
 
@@ -311,10 +319,15 @@ public class StartTestActivity extends AppCompatActivity {
 
                  tv.setText("Completed");
                  Intent i = new Intent(StartTestActivity.this, ResultActivity.class);
-                 i.putExtra("total", String.valueOf(total));
+                 if(total>5){
+                     i.putExtra("total", String.valueOf(5));
+                 }else {
+                     i.putExtra("total", String.valueOf(total));
+                 }
                  i.putExtra("correct", String.valueOf(correct));
                  i.putExtra("incorrect", String.valueOf(wrong));
                  startActivity(i);
+                 finish();
              }
          }.start();
     }

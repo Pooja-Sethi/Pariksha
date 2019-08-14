@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
         android:name=".Pariksha"
@@ -81,7 +82,11 @@
         <activity android:name=".InsertQuestion" />
         <activity android:name=".GiveExamActivity" />
         <activity android:name=".StartTestActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity
+            android:name=".ResultActivity"
+            android:parentActivityName=".GiveExamActivity" />
+        <activity android:name=".DiscussionActivity" />
+        <activity android:name=".SmsActivity"></activity>
     </application>
 
 </manifest>

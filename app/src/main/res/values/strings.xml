@@ -68,7 +68,6 @@
     <string name="give_text">Give Text</string>
     <string name="give_test">GIVE TEST</string>
     <string name="result">RESULT</string>
-    <string name="disscussion">DISSCUSSION</string>
     <string name="start_test">START TEST</string>
     <string name="start_test_student">Start Test</string>
     <string name="ques_no">Ques:-</string>
@@ -78,6 +77,24 @@
     <string name="option_4">Option4</string>
     <string name="_00_00">00:00</string>
     <string name="total_questions">Total Questions</string>
+    <string name="result_class">Result class</string>
+    <string name="discussion">DISCUSSION</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="phone_num">Phone No.</string>
+    <string name="confirm_your_result">Confirm Your Result</string>
+    <string name="done">Done</string>
+    <string name="topicname">TopicName</string>
+    <string name="not_given_text">Not given Text</string>
+    <string name="random_text">Random Text</string>
+    <string name="submit">Submit</string>
+    <string name="give_test_menu">Give Test</string>
+    <string name="discussion_menu">Discussion</string>
+    <string name="see_results">See Results</string>
+    <string name="go_to_test_tooltip">Go to Test</string>
+    <string name="send_email">send email</string>
+    <string name="take_picture">take picture!</string>
+    <string name="discussion_teacher">DISCUSSION</string>
     <string-array name="classes">
         <item>Class 1</item>
         <item>Class 2</item>

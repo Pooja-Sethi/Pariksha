@@ -49,6 +49,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public static EditText mkey;
     private DatabaseReference mDatabase;
+    public static String nameStr;
 
     private Toolbar mtoolbar;
 
@@ -70,6 +71,7 @@ public class Main2Activity extends AppCompatActivity {
         radiogroup = (RadioGroup) findViewById(R.id.options);
 
         mkey = (EditText) findViewById(R.id.key);
+        nameStr = mUsername.getEditText().getText().toString();
 
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
        // mRef = new Firebase("https://pariksha-bdd26.firebaseio.com/");
@@ -139,6 +141,7 @@ public class Main2Activity extends AppCompatActivity {
 
             mEmail.setError(null);
             return true;
+
         }
     }
 
